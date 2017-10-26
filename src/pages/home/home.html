@@ -1,18 +1,16 @@
+
 <ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+  <ion-navbar color="primary">
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>TankLog</h3>
+  <h1 id="title">TankLog</h1>
 
   <p>
-    Welcome to TankLog! Click below to log your tank's test results!
+    Welcome to TankLog! The easiest way to keep a simple record of your reef aquarium's water quality!
   </p>
 
-  <button ion-button (click)="openTest()">Test Now</button>
+  <button ion-button (click)="openTest()">New Entry</button>
+  <button ion-button>History</button>
 </ion-content>
