@@ -10,14 +10,41 @@
 
   <ion-list>
 
-    <ion-item color="primary" class="slider">
+    Calcium
+    <ion-item color="secondary" class="slider">
       <ion-range min="300" max="600" [(ngModel)]="calcium" step="5"></ion-range>
     </ion-item>
     {{calcium}}
-    <ion-item color="primary" class="slider">
+
+    Alkalinity
+    <ion-item color="secondary" class="slider">
       <ion-range min="40" max="130" [(ngModel)]="alkalinity" step="1"></ion-range>
     </ion-item>
     {{alkalinity / 10}}
+
+    Magnesium
+    <ion-item color="secondary" class="slider">
+      <ion-range min="800" max="1600" [(ngModel)]="magnesium" step="20"></ion-range>
+    </ion-item>
+    {{magnesium}}
+
+    Nitrate
+    <ion-item color="secondary" class="slider">
+      <ion-range min="0" max="2000" [(ngModel)]="nitrate" step="25"></ion-range>
+    </ion-item>
+    {{nitrate / 100}}
+
+    Phosphate
+    <ion-item color="secondary" class="slider">
+      <ion-range min="0" max="200" [(ngModel)]="phosphate" step="2"></ion-range>
+    </ion-item>
+    {{phosphate / 100}}
+
+    Salinity
+    <ion-item color="secondary" class="slider">
+      <ion-range min="1010" max="1035" [(ngModel)]="salinity" step="1"></ion-range>
+    </ion-item>
+    {{salinity / 1000}}
 
     <ion-textarea>
 
