@@ -10,14 +10,14 @@
 
   <ion-list>
 
+    <ion-item color="primary" class="slider">
+      <ion-range min="300" max="600" [(ngModel)]="calcium" step="5"></ion-range>
+    </ion-item>
     {{calcium}}
-    <ion-item>
-      <ion-range min="300" max="600" [(ngModel)]="calcium" color="primary" step="5"></ion-range>
+    <ion-item color="primary" class="slider">
+      <ion-range min="40" max="130" [(ngModel)]="alkalinity" step="1"></ion-range>
     </ion-item>
-    {{alkalinity}}
-    <ion-item>
-      <ion-range min="4" max="13" [(ngModel)]="alkalinity" color="primary" step=".1"></ion-range>
-    </ion-item>
+    {{alkalinity / 10}}
 
     <ion-textarea>
 
