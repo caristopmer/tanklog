@@ -46,9 +46,18 @@
     </ion-item>
     {{salinity / 1000}}
 
-    <ion-textarea>
+    Notes:
+    <ion-textarea class="notes">
 
     </ion-textarea>
 
+    <ion-item>
+        <ion-label>Entry Date:</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
+    </ion-item>
+
   </ion-list>
+
+  <button ion-button>Log Results</button>
+
 </ion-content>
