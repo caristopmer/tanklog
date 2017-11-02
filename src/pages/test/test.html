@@ -1,0 +1,63 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <h2>Test Results</h2>
+
+  <ion-list>
+
+    Calcium
+    <ion-item color="secondary" class="slider">
+      <ion-range min="300" max="600" [(ngModel)]="calcium" step="5"></ion-range>
+    </ion-item>
+    {{calcium}}
+
+    Alkalinity
+    <ion-item color="secondary" class="slider">
+      <ion-range min="40" max="130" [(ngModel)]="alkalinity" step="1"></ion-range>
+    </ion-item>
+    {{alkalinity / 10}}
+
+    Magnesium
+    <ion-item color="secondary" class="slider">
+      <ion-range min="800" max="1600" [(ngModel)]="magnesium" step="20"></ion-range>
+    </ion-item>
+    {{magnesium}}
+
+    Nitrate
+    <ion-item color="secondary" class="slider">
+      <ion-range min="0" max="2000" [(ngModel)]="nitrate" step="25"></ion-range>
+    </ion-item>
+    {{nitrate / 100}}
+
+    Phosphate
+    <ion-item color="secondary" class="slider">
+      <ion-range min="0" max="200" [(ngModel)]="phosphate" step="2"></ion-range>
+    </ion-item>
+    {{phosphate / 100}}
+
+    Salinity
+    <ion-item color="secondary" class="slider">
+      <ion-range min="1010" max="1035" [(ngModel)]="salinity" step="1"></ion-range>
+    </ion-item>
+    {{salinity / 1000}}
+
+    Notes:
+    <ion-textarea class="notes">
+
+    </ion-textarea>
+
+    <ion-item>
+        <ion-label>Entry Date:</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
+    </ion-item>
+
+  </ion-list>
+
+  <button ion-button>Log Results</button>
+
+</ion-content>
