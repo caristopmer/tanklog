@@ -20,7 +20,7 @@ export class TestPage {
   private nitrate: number;
   private phosphate: number;
   private salinity: number;
-  private date: Date;
+  private date: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.calcium = 420;
@@ -29,7 +29,7 @@ export class TestPage {
     this.nitrate = 0;
     this.phosphate = 0;
     this.salinity = 1026;
-    this.date = new Date();
+    this.date = new Date().toISOString();
   }
 
   ionViewDidLoad() {
