@@ -1,13 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-/**
- * Generated class for the TestPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-
 @IonicPage()
 @Component({
   selector: 'page-test',
@@ -21,6 +14,7 @@ export class TestPage {
   private phosphate: number;
   private salinity: number;
   private date: string;
+  private notes: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.calcium = 420;
