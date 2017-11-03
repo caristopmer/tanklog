@@ -1,12 +1,19 @@
 page-test {
     
-    .slider {
-        display: inline-block;
-        width: 85%;
-    }
+    // .slider {
+    //     display: inline-block;
+    //     width: 85%;
+    // }
 
     .notes {
         border: 2px solid black;
+        margin-bottom: 5%;
+    }
+
+    .test-value {
+        float: right;
+        margin-right: 3%;
+        font-size: 1.2em;
     }
 
 }

@@ -6,45 +6,40 @@
 
 
 <ion-content padding>
-  <h2>Test Results</h2>
+  <h2 class="page-title">Test Results</h2>
 
   <ion-list class="test-sliders">
 
-    Calcium
+    Calcium: <span class="test-value">{{calcium}}</span>
     <ion-item no-lines color="secondary" class="slider">
       <ion-range min="300" max="600" [(ngModel)]="calcium" step="5"></ion-range>
     </ion-item>
-    {{calcium}}
-
-    Alkalinity
+    
+    Alkalinity: <span class="test-value">{{(alkalinity / 10).toFixed(1)}}</span>
     <ion-item no-lines color="secondary" class="slider">
       <ion-range min="40" max="130" [(ngModel)]="alkalinity" step="1"></ion-range>
     </ion-item>
-    {{alkalinity / 10}}
 
-    Magnesium
+    Magnesium: <span class="test-value">{{magnesium}}</span>
     <ion-item no-lines color="secondary" class="slider">
       <ion-range min="800" max="1600" [(ngModel)]="magnesium" step="20"></ion-range>
     </ion-item>
-    {{magnesium}}
 
-    Nitrate
+    Nitrate: <span class="test-value">{{(nitrate / 100).toFixed(2)}}</span>
     <ion-item no-lines color="secondary" class="slider">
       <ion-range min="0" max="2000" [(ngModel)]="nitrate" step="25"></ion-range>
     </ion-item>
-    {{nitrate / 100}}
 
-    Phosphate
+    Phosphate: <span class="test-value">{{(phosphate / 100).toFixed(2)}}</span>
     <ion-item no-lines color="secondary" class="slider">
       <ion-range min="0" max="200" [(ngModel)]="phosphate" step="2"></ion-range>
     </ion-item>
-    {{phosphate / 100}}
 
-    Salinity
+    Salinity: <span class="test-value">{{(salinity / 1000).toFixed(3)}}</span>
     <ion-item no-lines color="secondary" class="slider">
       <ion-range min="1010" max="1035" [(ngModel)]="salinity" step="1"></ion-range>
     </ion-item>
-    {{salinity / 1000}}
+    
 
     Notes:
     <ion-textarea class="notes">
