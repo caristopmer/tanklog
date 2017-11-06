@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+import { NativeStorage } from '@ionic-native/native-storage';
+
 @IonicPage()
 @Component({
   selector: 'page-test',
@@ -16,7 +18,7 @@ export class TestPage {
   private date: string;
   private notes: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private nativeStorage: NativeStorage) {
     this.calcium = 420;
     this.alkalinity = 85;
     this.magnesium = 1300;
