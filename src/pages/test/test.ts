@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { NativeStorage } from '@ionic-native/native-storage';
+import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
 
 @IonicPage()
 @Component({
@@ -18,7 +18,7 @@ export class TestPage {
   private date: string;
   private notes: string;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private nativeStorage: NativeStorage) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private sqlite: SQLite) {
     this.calcium = 420;
     this.alkalinity = 85;
     this.magnesium = 1300;
@@ -30,6 +30,29 @@ export class TestPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TestPage');
+  }
+
+  saveResults() {
+    this.sqlite.create({
+      name: 'results.db',
+      location: 'default'
+    })
+      .then((db: SQLiteObject) => {
+    
+    
+        db.executeSql('create table if not exists testResults(id integer primary key, date varchar(64), calcium integer, alkalinity real, magnesium integer, nitrate real, phosphate real, salinity real, notes varchar(256))', {})
+          .then(() => console.log('Executed SQL'))
+          .catch(e => console.log(e));
+
+        db.executeSql('insert into testResults (date, calcium, alkalinity, magnesium, nitrate, phosphate, salinity, notes) values (?, ?, ?, ?, ?, ?, ?, ?)', [this.date, this.calcium, this.alkalinity, this.magnesium, this. nitrate, this.phosphate, this.salinity, this.notes])
+          .then(() => console.log('Executed SQL'))
+          .catch(e => console.log(e));
+    
+    
+      })
+      .catch(e => console.log(e));
+
+      this.navCtrl.popToRoot();
   }
 
 }
