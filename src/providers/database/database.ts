@@ -51,6 +51,17 @@ export class DatabaseProvider {
     });
   }
 
+  addResults(date, calcium, alkalinity, magnesium, nitrate, phosphate, salinity, notes) {
+    let data = [date, calcium, alkalinity, magnesium, nitrate, phosphate, salinity, notes];
+    return this.database.executeSql("INSERT INTO testResults (date, calcium, alkalinity, magnesium, nitrate, phosphate, salinity, notes) values (?, ?, ?, ?, ?, ?, ?, ?)", data).then(res => {
+      return res;
+    });
+  }
+
+  getAllResults() {
+
+  }
+
   getDatabaseState() {
     return this.databaseReady.asObservable();
   }
