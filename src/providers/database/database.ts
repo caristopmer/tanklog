@@ -59,7 +59,27 @@ export class DatabaseProvider {
   }
 
   getAllResults() {
-
+    return this.database.executeSql("SELECT * FROM testResults", []).then(data => {
+      let results = [];
+      if (data.rows.length > 0) {
+        for (var i = 0; i < data.rows.length; i++) {
+          results.push({
+            date: data.rows.item(i).date,
+            calcium: data.rows.item(i).calcium,
+            alkalinity: data.rows.item(i).alkalinity,
+            magnesium: data.rows.item(i).magnesium,
+            nitrate: data.rows.item(i).nitrate,
+            phosphate: data.rows.item(i).phosphate,
+            salinity: data.rows.item(i).salinity,
+            notes: data.rows.item(i).notes
+          })
+        }
+      }
+      return results;
+    }, err => {
+      console.log('Error: ', err);
+      return [];
+    })
   }
 
   getDatabaseState() {
