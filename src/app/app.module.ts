@@ -8,8 +8,6 @@ import { HomePage } from '../pages/home/home';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
-
 @NgModule({
   declarations: [
     MyApp,
@@ -27,7 +25,6 @@ import { SQLite, SQLiteObject } from '@ionic-native/sqlite';
   providers: [
     StatusBar,
     SplashScreen,
-    SQLite,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
