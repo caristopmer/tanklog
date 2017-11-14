@@ -8,7 +8,10 @@
   <h2 class="page-title">History</h2>
 
   <ion-list>
-    <ion-item></ion-item>
+    <ion-item *ngFor="let res of testResults">
+      <h2>{{ res.date }}</h2>
+      <p>{{ res.calcium }}/{{ res.alkalinity }}/{{ res.magnesium }}/{{ res.nitrate }}/{{ res.phosphate }}/{{ res.salinity }}</p>
+    </ion-item>
   </ion-list>
 
 </ion-content>

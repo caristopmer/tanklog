@@ -11,11 +11,6 @@ export class TestPage {
   testResult = {};
 
   constructor(public navCtrl: NavController, private databaseProvider: DatabaseProvider, public navParams: NavParams) {
-    this.databaseProvider.getDatabaseState().subscribe(rdy => {
-      if (rdy) {
-        this.load
-      }
-    })
     this.testResult['calcium'] = 420;
     this.testResult['alkalinity'] = 85;
     this.testResult['magnesium'] = 1300;
