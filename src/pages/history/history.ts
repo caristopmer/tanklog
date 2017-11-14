@@ -1,3 +1,4 @@
+import { DatabaseProvider } from './../../providers/database/database';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -10,7 +11,12 @@ export class HistoryPage {
 
   private entriesArray: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, private databaseProvider: DatabaseProvider, public navParams: NavParams) {
+    this.databaseProvider.getDatabaseState().subscribe(rdy => {
+      if (rdy) {
+        this.load
+      }
+    })
   }
 
   ionViewDidLoad() {
