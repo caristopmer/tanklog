@@ -10,8 +10,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class HistoryPage {
   testResults = [];
 
-  private entriesArray: any;
-
   constructor(public navCtrl: NavController, private databaseProvider: DatabaseProvider, public navParams: NavParams) {
     this.databaseProvider.getDatabaseState().subscribe(rdy => {
       if (rdy) {

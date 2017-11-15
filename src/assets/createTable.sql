@@ -1,1 +1,1 @@
-CREATE TABLE IF NOT EXISTS testResults(id integer primary key, date varchar(64), calcium integer, alkalinity real, magnesium integer, nitrate real, phosphate real, salinity real, notes varchar(256);
+CREATE TABLE IF NOT EXISTS testResults(id integer primary key, date varchar(64), calcium integer, alkalinity real, magnesium integer, nitrate real, phosphate real, salinity real, notes varchar(256));
