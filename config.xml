@@ -86,4 +86,5 @@
     <plugin name="ionic-plugin-keyboard" spec="~2.2.1" />
     <plugin name="uk.co.workingedge.cordova.plugin.sqliteporter" spec="^1.0.2" />
     <engine name="ios" spec="~4.5.3" />
+    <allow-navigation href="http://169.254.219.18:8100" />
 </widget>

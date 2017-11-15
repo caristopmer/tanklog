@@ -8,9 +8,9 @@
   <h2 class="page-title">History</h2>
 
   <ion-list>
-    <ion-item no-lines class="entry-item" *ngFor="let res of testResults">
-      <h3>{{ res.calcium }}/{{ (res.alkalinity / 10).toFixed(1).toString() }}/{{ res.magnesium }}/{{ (res.nitrate / 100).toFixed(2).toString() }}/{{ (res.phosphate / 100).toFixed(2).toString() }}/{{ (res.salinity / 1000).toFixed(3) }}</h3>
-      <p>{{ res.date.slice(0, 10) }}</p>
+    <ion-item no-lines class="entry-item" *ngFor="let entry of testResults" (click)='viewEntry(entry)'>
+      <h3>{{ entry.calcium }}/{{ (entry.alkalinity / 10).toFixed(1) }}/{{ entry.magnesium }}/{{ (entry.nitrate / 100).toFixed(2) }}/{{ (entry.phosphate / 100).toFixed(2) }}/{{ (entry.salinity / 1000).toFixed(3) }}</h3>
+      <p>{{ entry.date.slice(0, 10) }}</p>
     </ion-item>
   </ion-list>
 
