@@ -15,4 +15,8 @@ export class HomePage {
     this.navCtrl.push("TestPage");
   }
 
+  openHistory() {
+    this.navCtrl.push("HistoryPage");
+  }
+
 }

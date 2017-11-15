@@ -1,0 +1,17 @@
+
+<ion-header>
+  <ion-navbar color="primary">
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2 class="page-title">History</h2>
+
+  <ion-list>
+    <ion-item *ngFor="let res of testResults">
+      <h2>{{ res.date }}</h2>
+      <p>{{ res.calcium }}/{{ (res.alkalinity / 10).toFixed(1) }}/{{ res.magnesium }}/{{ (res.nitrate / 100).toFixed(2) }}/{{ (res.phosphate / 100).toFixed(2) }}/{{ (res.salinity / 1000).toFixed(3) }}</p>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

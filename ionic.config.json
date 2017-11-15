@@ -2,5 +2,7 @@
   "name": "tanklog",
   "app_id": "b91d2854",
   "type": "ionic-angular",
-  "integrations": {}
+  "integrations": {
+    "cordova": {}
+  }
 }

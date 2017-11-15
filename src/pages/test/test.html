@@ -10,49 +10,47 @@
 
   <ion-list class="test-sliders">
 
-    Calcium: <span class="test-value">{{calcium}}</span>
+    Calcium: <span class="test-value">{{testResult.calcium}}</span>
     <ion-item no-lines color="secondary" class="slider">
-      <ion-range min="300" max="600" [(ngModel)]="calcium" step="5"></ion-range>
+      <ion-range min="300" max="600" [(ngModel)]="testResult.calcium" step="5"></ion-range>
     </ion-item>
     
-    Alkalinity: <span class="test-value">{{(alkalinity / 10).toFixed(1)}}</span>
+    Alkalinity: <span class="test-value">{{(testResult.alkalinity / 10).toFixed(1)}}</span>
     <ion-item no-lines color="secondary" class="slider">
-      <ion-range min="40" max="130" [(ngModel)]="alkalinity" step="1"></ion-range>
+      <ion-range min="40" max="130" [(ngModel)]="testResult.alkalinity" step="1"></ion-range>
     </ion-item>
 
-    Magnesium: <span class="test-value">{{magnesium}}</span>
+    Magnesium: <span class="test-value">{{testResult.magnesium}}</span>
     <ion-item no-lines color="secondary" class="slider">
-      <ion-range min="800" max="1600" [(ngModel)]="magnesium" step="20"></ion-range>
+      <ion-range min="800" max="1600" [(ngModel)]="testResult.magnesium" step="20"></ion-range>
     </ion-item>
 
-    Nitrate: <span class="test-value">{{(nitrate / 100).toFixed(2)}}</span>
+    Nitrate: <span class="test-value">{{(testResult.nitrate / 100).toFixed(2)}}</span>
     <ion-item no-lines color="secondary" class="slider">
-      <ion-range min="0" max="2000" [(ngModel)]="nitrate" step="25"></ion-range>
+      <ion-range min="0" max="2000" [(ngModel)]="testResult.nitrate" step="25"></ion-range>
     </ion-item>
 
-    Phosphate: <span class="test-value">{{(phosphate / 100).toFixed(2)}}</span>
+    Phosphate: <span class="test-value">{{(testResult.phosphate / 100).toFixed(2)}}</span>
     <ion-item no-lines color="secondary" class="slider">
-      <ion-range min="0" max="200" [(ngModel)]="phosphate" step="2"></ion-range>
+      <ion-range min="0" max="200" [(ngModel)]="testResult.phosphate" step="2"></ion-range>
     </ion-item>
 
-    Salinity: <span class="test-value">{{(salinity / 1000).toFixed(3)}}</span>
+    Salinity: <span class="test-value">{{(testResult.salinity / 1000).toFixed(3)}}</span>
     <ion-item no-lines color="secondary" class="slider">
-      <ion-range min="1010" max="1035" [(ngModel)]="salinity" step="1"></ion-range>
+      <ion-range min="1010" max="1035" [(ngModel)]="testResult.salinity" step="1"></ion-range>
     </ion-item>
     
 
     Notes:
-    <ion-textarea class="notes">
-
-    </ion-textarea>
+    <ion-textarea class="notes" [(ngModel)]="testResult.notes"></ion-textarea>
 
     <ion-item no-lines>
         <ion-label>Entry Date:</ion-label>
-        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="date"></ion-datetime>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="testResult.date"></ion-datetime>
     </ion-item>
 
   </ion-list>
 
-  <button ion-button>Log Results</button>
+  <button ion-button (click)="saveResult()">Log Results</button>
 
 </ion-content>
