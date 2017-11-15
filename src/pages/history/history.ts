@@ -24,6 +24,10 @@ export class HistoryPage {
     })
   }
 
+  viewEntry(entry) {
+    this.navCtrl.push("EntryPage");
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad HistoryPage');
   }
