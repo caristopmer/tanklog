@@ -10,7 +10,7 @@
   <ion-list>
     <ion-item *ngFor="let res of testResults">
       <h2>{{ res.date }}</h2>
-      <p>{{ res.calcium }}/{{ res.alkalinity }}/{{ res.magnesium }}/{{ res.nitrate }}/{{ res.phosphate }}/{{ res.salinity }}</p>
+      <p>{{ res.calcium }}/{{ (res.alkalinity / 10).toFixed(1) }}/{{ res.magnesium }}/{{ (res.nitrate / 100).toFixed(2) }}/{{ (res.phosphate / 100).toFixed(2) }}/{{ (res.salinity / 1000).toFixed(3) }}</p>
     </ion-item>
   </ion-list>
 
