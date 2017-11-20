@@ -25,7 +25,7 @@ export class HistoryPage {
   }
 
   viewEntry(entry) {
-    this.navCtrl.push("EntryPage");
+    this.navCtrl.push("EntryPage", {entry: entry});
   }
 
   ionViewDidLoad() {
