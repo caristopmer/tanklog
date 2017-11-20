@@ -7,14 +7,14 @@
 <ion-content padding>
   <h2 class="page-title">History</h2>
   <ion-grid>
-    <ion-row>
+    <ion-row justify-content-center>
       <ion-col>
-        date
+        {{ entry.date }}
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row justify-content-center>
       <ion-grid>
-        <ion-row>
+        <ion-row justify-content-center>
           <ion-col>
             Calc.
           </ion-col>
@@ -31,64 +31,65 @@
             Phos.
           </ion-col>                    
         </ion-row>
-        <ion-row>
+        <ion-row justify-content-center>
           <ion-col>
-            value
+            {{ entry.calcium }}
           </ion-col>
           <ion-col>
-            value
+            {{ entry.alkalinity}}
           </ion-col>
           <ion-col>
-            value
+            {{ entry.magnesium }}
           </ion-col>
           <ion-col>
-            value
+            {{ entry.nitrate }}
           </ion-col>
           <ion-col>
-            value
+            {{ entry.phosphate }}
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-row>
-    <ion-row>
+    <ion-row justify-content-center>
       <ion-grid>
-        <ion-row>
+        <ion-row justify-content-center>
           <ion-col>
-            salinity
+            Salinity:
+          </ion-col>
+          <ion-col>
+            Temperature:
+          </ion-col>                   
+        </ion-row>
+        <ion-row justify-content-center>
+          <ion-col>
+            {{ entry.salinity }}
           </ion-col>
           <ion-col>
             temp
-          </ion-col>                   
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            salinity value
-          </ion-col>
-          <ion-col>
-            temp value
           </ion-col>
         </ion-row>
       </ion-grid>
     </ion-row>
-    <ion-row>
+    <ion-row justify-content-center>
       <ion-col>
-        WC
+        WC:
       </ion-col>
       <ion-col>
-        sock
-      </ion-col>
-    </ion-row>
-    <ion-row>
-      <ion-col>
-        wipe
-      </ion-col>
-      <ion-col>
-        skimmer
+        Sock Change:
       </ion-col>
     </ion-row>
-    <ion-row>
+    <ion-row justify-content-center>
       <ion-col>
-        notes
+        Algae Wipe:
+      </ion-col>
+      <ion-col>
+        Skimmer Clean:
+      </ion-col>
+    </ion-row>
+    <ion-row justify-content-center>
+      <ion-col>
+        Entry Notes:
+        <p>{{ entry.notes }}</p>
       </ion-col>
     </ion-row>
   </ion-grid>
